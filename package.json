@@ -24,6 +24,7 @@
     "native-base": "^2.6.1",
     "react": "16.3.1",
     "react-native": "~0.55.2",
+    "react-native-app-intro": "^1.1.5",
     "react-navigation": "^2.5.3",
     "styled-components": "^3.3.3",
     "uigradients": "^0.2.1"

@@ -3,6 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import { Button, Card, CardItem, Text, Body } from 'native-base';
 import { Font } from 'expo'; 
 import Login from "./src/Login/index.js";
+import Register from "./src/Register/index.js";
+import Recover from "./src/Recover/index.js";
 
 export default class App extends React.Component {
 
@@ -25,6 +27,6 @@ export default class App extends React.Component {
     if (!this.state.isReady) {
       return <Expo.AppLoading />;
     }
-    return <Login />;
+    return <Recover />;
   }
 }

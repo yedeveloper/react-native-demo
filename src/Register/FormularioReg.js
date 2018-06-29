@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { Item, Icon, Input, Button } from 'native-base';
+import { Item, Icon, Input, Button, ListItem, CheckBox, Body } from 'native-base';
 import styled from "styled-components/native";
 
-export default class Formulario extends React.Component {
+export default class FormularioReg extends React.Component {
 
   onPressLearnMore(){
       console.log('ok');
@@ -15,6 +15,21 @@ export default class Formulario extends React.Component {
       <ViewForm>
         <ItemFormUser style={{}}>
             <Icon
+              name="md-person"
+              style={{
+                color: '#841584', fontSize: 20, marginLeft: 10,
+              }}
+            />
+            <Input
+              blurOnSubmit={false}
+              returnKeyType="next"
+              editable={true}
+              autoCapitalize="sentences"
+              placeholder={'Name...'}
+            />
+        </ItemFormUser>
+        <ItemFormPass style={{}}>
+            <Icon
               name="md-mail"
               style={{
                 color: '#841584', fontSize: 20, marginLeft: 10,
@@ -25,9 +40,9 @@ export default class Formulario extends React.Component {
               returnKeyType="next"
               editable={true}
               autoCapitalize="sentences"
-              placeholder={'Usuario...'}
+              placeholder={'Email...'}
             />
-        </ItemFormUser>
+        </ItemFormPass>
         <ItemFormPass style={{}}>
             <Icon
               name="md-lock"
@@ -44,6 +59,12 @@ export default class Formulario extends React.Component {
               placeholder={'Password...'}
             />
         </ItemFormPass>
+        <ListItem>
+            <CheckBox />
+            <Body>
+              <TextCheck>I agree to the terms and conditions</TextCheck>
+            </Body>
+          </ListItem>
       </ViewForm>
 	    );
 	}
@@ -64,4 +85,8 @@ const ItemFormPass = styled(Item)`
   width: 100%;
   margin-top: 20px;
   margin-bottom: 10px;
+`;
+
+const TextCheck = styled(Text)`
+  margin-left: 8px;
 `;
